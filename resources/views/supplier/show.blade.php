@@ -1,15 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 @section('content')
+<br>   
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <div class="float-start">
-                        {{ __('supplier') }}
+                        {{ __('Supplier') }}
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('supplier.create') }}" class="btn btn-sm btn-outline-primary">Tambah Data</a>
+                        <a href="{{ route('supplier.index') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
                     </div>
                 </div>
 

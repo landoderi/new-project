@@ -1,21 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <div class="float-start">
-                        {{ __('supplier') }}
+                        {{ __('Supplier') }}
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('supplier.create') }}" class="btn btn-sm btn-outline-primary">Tambah Data</a>
+                        <a href="{{ route('supplier.create') }} " class="btn btn-outline-primary">Tambah Data</a>
                     </div>
                 </div>
 
                 <div class="card-body">
-                    <div class="table-responsive">
+                    <div class="table">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -23,10 +24,11 @@
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>No hp</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @php $no = 1; @endphp
+                                @php $no = 1; @endphp   
                                 @forelse ($supplier as $data)
                                 <tr>
                                     <td>{{ $no++ }}</td>
@@ -38,7 +40,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <a href="{{ route('supplier.show', $data->id) }}"
-                                                class="btn btn-sm btn-outline-dark">Show</a> |
+                                                class="btn btn-sm btn-outline-info">Show</a> |
                                             <a href="{{ route('supplier.edit', $data->id) }}"
                                                 class="btn btn-sm btn-outline-success">Edit</a> |
                                             <button type="submit" onsubmit="return confirm('Are You Sure ?');"

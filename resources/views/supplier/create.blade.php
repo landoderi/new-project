@@ -1,13 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
+<p>
+
+</p>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
                     <div class="float-start">
-                        {{ __('Dashboard') }}
+                        {{ __('Buat Data Supplier') }}
                     </div>
                     <div class="float-end">
                         <a href="{{ route('supplier.index') }}" class="btn btn-sm btn-outline-primary">Kembali</a>

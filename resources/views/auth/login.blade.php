@@ -64,6 +64,9 @@
                                 @endif
                             </div>
                         </div>
+                                    <div class="footer-text">
+                Belum punya akun? <a href="{{ route('register') }}">Daftar</a>
+            </div>
                     </form>
                 </div>
             </div>

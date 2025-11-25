@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -51,8 +52,8 @@
                             </span>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-sm btn-primary">SIMPAN</button>
-                        <button type="reset" class="btn btn-sm btn-warning">RESET</button>
+                        <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
+                        <button type="reset" class="btn btn-sm btn-warning">Reset</button>
                     </form>
                 </div>
             </div>
