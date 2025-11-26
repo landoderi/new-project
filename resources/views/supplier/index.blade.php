@@ -14,7 +14,6 @@
                         <a href="{{ route('supplier.create') }} " class="btn btn-outline-primary">Tambah Data</a>
                     </div>
                 </div>
-
                 <div class="card-body">
                     <div class="table">
                         <table class="table">

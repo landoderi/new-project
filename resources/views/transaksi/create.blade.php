@@ -26,9 +26,9 @@
 
                 {{-- Pilih Pelanggan --}}
                 <div class="mb-3">
-                    <label for="id_supplier" class="form-label">Pelanggan</label>
+                    <label for="id_supplier" class="form-label">Supplier</label>
                     <select name="id_supplier" id="id_supplier" class="form-select" required>
-                        <option value="">-- Pilih Pelanggan --</option>
+                        <option value="">-- Pilih Supplier --</option>
                         @foreach ($supplier as $p)
                         <option value="{{ $p->id }}">{{ $p->nama_supplier }}</option>
                         @endforeach
@@ -37,15 +37,15 @@
 
                 <hr>
 
-                <h5>Daftar Produk</h5>
+                <h5>Daftar Komponen</h5>
 
                 {{-- Wrapper Produk --}}
                 <div id="komponen-wrapper">
                     <div class="row komponen-item mb-3">
                         <div class="col-md-5">
-                            <label class="form-label">Produk</label>
+                            <label class="form-label">komponen</label>
                             <select name="id_komponen[]" class="form-select komponen-select" required>
-                                <option value="">-- Pilih Produk --</option>
+                                <option value="">-- Pilih Komponen --</option>
                                 @foreach ($komponen as $prod)
                                 <option value="{{ $prod->id }}" data-harga="{{ $prod->harga }}">
                                     {{ $prod->nama_komponen }} - Rp{{ number_format($prod->harga, 0, ',', '.') }}
